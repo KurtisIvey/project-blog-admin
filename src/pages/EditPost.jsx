@@ -9,7 +9,6 @@ const EditPost = () => {
   let { id } = useParams();
   const navigate = useNavigate();
 
-  const [post, setPost] = useState(null);
   const [title, setTitle] = useState("");
   const [textContent, setTextContent] = useState("");
 
@@ -22,7 +21,6 @@ const EditPost = () => {
       `https://project-blog-api.herokuapp.com/api/posts/${id}`
     );
     const postRes = await response.json();
-    setPost(postRes.post);
     setTitle(postRes.post.title);
     setTextContent(postRes.post.textContent);
   }
@@ -55,7 +53,7 @@ const EditPost = () => {
     const data = await response.json();
     console.log(response.status);
 
-    if (response.status !== 201) {
+    if (response.status !== 200) {
       return;
       //clear form values and convey error
     } else {

@@ -7,7 +7,7 @@ import EditPost from "./pages/EditPost";
 
 function App() {
   return (
-    <div className=" h-full  bg-slate-100">
+    <div className=" h-screen  bg-slate-100">
       <HashRouter>
         <Routes>
           <Route path="/" exact element={<HomePosts />} />

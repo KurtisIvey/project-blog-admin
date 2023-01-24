@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Comments from "../components/Comments";
 import Footer from "../components/Footer";
@@ -63,12 +64,19 @@ const SinglePosts = () => {
             <span className="flex">
               <h2 className="text-xl md:text-2xl">{post.title}</h2>
               {localStorage.token && (
-                <button
-                  onClick={(event) => deletePost(event)}
-                  class="bg-red-500 hover:bg-red-700 text-white font-bold py-0.5 px-1 text-xs rounded ml-5"
-                >
-                  Delete Post
-                </button>
+                <span>
+                  <button
+                    onClick={(event) => deletePost(event)}
+                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-0.5 px-1 text-xs rounded ml-5"
+                  >
+                    Delete Post
+                  </button>
+                  <Link to={`/posts/${id}/edit`}>
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-0.5 px-1 text-xs rounded ml-5">
+                      Edit
+                    </button>
+                  </Link>
+                </span>
               )}
             </span>
 

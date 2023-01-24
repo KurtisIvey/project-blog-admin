@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import NewPostButton from "../components/NewPostButton";
@@ -26,7 +25,7 @@ const HomePosts = () => {
   }, []);
 
   return (
-    <div className="h-full md:h-screen bg-slate-100">
+    <div className="h-fill md:h-screen bg-slate-100">
       <Navbar />
       <div className=" flex flex-col items-center">
         {localStorage.token && <NewPostButton />}
