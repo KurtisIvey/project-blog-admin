@@ -9,7 +9,7 @@ const Footer = () => {
       <ul className="flex flex-wrap items-center text-xs  text-gray-500 dark:text-gray-400 mt-2 mb-3 md:mt-0">
         <li>
           <a
-            href="https://github.com/Kitsunebackfire/project-blog-client"
+            href="https://github.com/Kitsunebackfire/project-blog-admin"
             className="mr-4 hover:underline md:mr-6"
           >
             Github
